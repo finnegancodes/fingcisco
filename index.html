@@ -12,7 +12,9 @@
   </style>
 </head>
 <body>
-  <code>
+  <button class="copy">copy</button>
+  <br/>
+  <code class="code">
     db = {
       whatadditionalinformationiscontainedinthe12bitextendedsystemidofabpdu: [
         { q: "macaddress", c: false },
@@ -550,5 +552,13 @@
       }
     }, 5e4);
   </code>
+  <script>
+    const copy = document.querySelector(".copy");
+    const code = document.querySelector(".code");
+    copy.addEventListener("click", () => {
+      navigator.clipboard.writeText(code.textContent);
+      console.log(code.textContent);
+    })
+  </script>
 </body>
 </html>
