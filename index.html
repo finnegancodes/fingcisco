@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FingCisco</title>
+  <style>
+    code {
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+  <code>
+    db = {
+      whatadditionalinformationiscontainedinthe12bitextendedsystemidofabpdu: [
+        { q: "macaddress", c: false },
+        { q: "vlanid", c: true },
+        { q: "ipaddress", c: false },
+        { q: "portid", c: false },
+      ],
+      duringtheimplementationofspanningtreeprotocolallswitchesarerebootedbythenetworkadministratorwhatisthefirststepofthespanningtreeelectionprocess:
+        [
+          {
+            q: "eachswitchwithalowerrootidthanitsneighborwillnotsendbpdus",
+            c: false,
+          },
+          {
+            q: "alltheswitchessendoutbpdusadvertisingthemselvesastherootbridge",
+            c: true,
+          },
+          { q: "eachswitchdeterminesthebestpathtoforwardtraffic", c: false },
+          {
+            q: "eachswitchdetermineswhatporttoblocktopreventaloopfromoccurring",
+            c: false,
+          },
+        ],
+      whichstpportroleisadoptedbyaswitchportifthereisnootherportwithalowercosttotherootbridge:
+        [
+          { q: "designatedport", c: false },
+          { q: "rootport", c: true },
+          { q: "alternate", c: false },
+          { q: "disabledport", c: false },
+        ],
+      whichtwoconceptsrelatetoaswitchportthatisintendedtohaveonlyenddevicesattachedandintendednevertobeusedtoconnecttoanotherswitchchoosetwo:
+        [
+          { q: "bridgeid", c: false },
+          { q: "edgeport", c: true },
+          { q: "extendedsystemid", c: false },
+          { q: "portfast", c: true },
+          { q: "pvst", c: false },
+        ],
+      whichthreecomponentsarecombinedtoformabridgeid: [
+        { q: "extendedsystemid", c: false },
+        { q: "cost", c: false },
+        { q: "ipaddress", c: false },
+        { q: "bridgepriority", c: true },
+        { q: "macaddress", c: true },
+        { q: "portid", c: false },
+      ],
+      inwhichtwoportstatesdoesaswitchlearnmacaddressesandprocessbpdusinapvstnetworkchoosetwo:
+        [
+          { q: "disabled", c: false },
+          { q: "forwarding", c: false },
+          { q: "listening", c: false },
+          { q: "blocking", c: false },
+          { q: "learning", c: true },
+        ],
+      ifnobridgepriorityisconfiguredinpvstwhichcriteriaisconsideredwhenelectingtherootbridge:
+        [
+          { q: "lowestmacaddress", c: false },
+          { q: "lowestipaddress", c: false },
+          { q: "highestipaddress", c: false },
+          { q: "highestmacaddress", c: false },
+        ],
+      whentheshowspanningtreevlan33commandisissuedonaswitchthreeportsareshownintheforwardingstateinwhichtwoportrolescouldtheseinterfacesfunctionwhileintheforwardingstatechoosetwo:
+        [
+          { q: "alternate", c: false },
+          { q: "designated", c: false },
+          { q: "disabled", c: false },
+          { q: "blocked", c: false },
+          { q: "root", c: true },
+        ],
+      whatisthefunctionofstpinascalablenetwork: [
+        {
+          q: "itdecreasesthesizeofthefailuredomaintocontaintheimpactoffailures",
+          c: false,
+        },
+        {
+          q: "itprotectstheedgeoftheenterprisenetworkfrommaliciousactivity",
+          c: false,
+        },
+        {
+          q: "itcombinesmultipleswitchtrunklinkstoactasonelogicallinkforincreasedbandwidth",
+          c: false,
+        },
+        { q: "itdisablesredundantpathstoeliminatelayer2loops", c: true },
+      ],
+      whatisacharacteristicofspanningtree: [
+        { q: "itisenabledbydefaultonciscoswitches", c: false },
+        { q: "itisusedtodiscoverinformationaboutanadjacentciscodevice", c: false },
+        { q: "ithasattlmechanismthatworksatlayer2", c: false },
+        { q: "itpreventspropagationoflayer2broadcastframes", c: false },
+      ],
+      whichspanningtreestandardsupportsonlyonerootbridgesothattrafficfromallvlansflowsoverthesamepath:
+        [
+          { q: "pvst", c: false },
+          { q: "8021d", c: false },
+          { q: "mst", c: false },
+          { q: "rapidpvst", c: false },
+        ],
+      whatisthepurposeofthespanningtreeprotocolstp: [
+        { q: "createssmallercollisiondomains", c: false },
+        { q: "preventsroutingloopsonarouter", c: false },
+        { q: "preventslayer2loops", c: false },
+        { q: "allowsciscodevicestoexchangeroutingtableupdates", c: false },
+        { q: "createssmallerbroadcastdomains", c: false },
+      ],
+      whatisthevalueusedtodeterminewhichportonanonrootbridgewillbecomearootportinastpnetwork:
+        [
+          { q: "thepathcost", c: false },
+          { q: "thehighestmacaddressofalltheportsintheswitch", c: false },
+          { q: "thelowestmacaddressofalltheportsintheswitch", c: false },
+          { q: "thevtprevisionnumber", c: false },
+        ],
+      refertotheexhibitwhichswitchwillbetherootbridgeaftertheelectionprocessiscomplete:
+        [
+          { q: "s1", c: false },
+          { q: "s2", c: false },
+          { q: "s3", c: false },
+          { q: "s4", c: false },
+        ],
+      whataretwodrawbackstoturningspanningtreeoffandhavingmultiplepathsthroughthelayer2switchnetworkchoosetwo:
+        [
+          { q: "themacaddresstablebecomesunstable", c: true },
+          { q: "theswitchactslikeahub", c: false },
+          { q: "portsecuritybecomesunstable", c: false },
+          { q: "broadcastframesaretransmittedindefinitely", c: false },
+          {
+            q: "portsecurityshutsdownalloftheportsthathaveattacheddevices",
+            c: false,
+          },
+        ],
+      asmallcompanynetworkhassixinterconnectedlayer2switchescurrentlyallswitchesareusingthedefaultbridgepriorityvaluewhichvaluecanbeusedtoconfigurethebridgepriorityofoneoftheswitchestoensurethatitbecomestherootbridgeinthisdesign:
+        [
+          { q: "1", c: false },
+          { q: "28672", c: false },
+          { q: "32768", c: false },
+          { q: "34816", c: false },
+          { q: "61440", c: false },
+        ],
+      refertotheexhibittheadministratortriedtocreateanetherchannelbetweens1andtheothertwoswitchesviathecommandsthatareshownbutwasunsuccessfulwhatistheproblem:
+        [
+          {
+            q: "trafficcannotbesenttotwodifferentswitchesthroughthesameetherchannellink",
+            c: true,
+          },
+          {
+            q: "trafficcannotbesenttotwodifferentswitchesbutonlytotwodifferentdeviceslikeanetherchannelenabledserverandaswitch",
+            c: false,
+          },
+          {
+            q: "trafficcanonlybesenttotwodifferentswitchesifetherchannelisimplementedongigabitethernetinterfaces",
+            c: false,
+          },
+          {
+            q: "trafficcanonlybesenttotwodifferentswitchesifetherchannelisimplementedonlayer3switches",
+            c: false,
+          },
+        ],
+      whichstatementistrueregardingtheuseofpagptocreateetherchannels: [
+        { q: "itrequiresfullduplex", c: false },
+        {
+          q: "itincreasesthenumberofportsthatareparticipatinginspanningtree",
+          c: false,
+        },
+        { q: "itrequiresmorephysicallinksthanlacpdoes", c: false },
+        {
+          q: "itmandatesthatanevennumberofports246etcbeusedforaggregation",
+          c: false,
+        },
+        { q: "itisciscoproprietary", c: false },
+      ],
+      whataretworequirementstobeabletoconfigureanetherchannelbetweentwoswitcheschoosetwo:
+        [
+          { q: "alltheinterfacesneedtoworkatthesamespeed", c: true },
+          { q: "allinterfacesneedtobeassignedtodifferentvlans", c: false },
+          { q: "differentallowedrangesofvlansmustexistoneachend", c: false },
+          { q: "alltheinterfacesneedtobeworkinginthesameduplexmode", c: true },
+          {
+            q: "theinterfacesthatareinvolvedneedtobecontiguousontheswitch",
+            c: false,
+          },
+        ],
+      refertotheexhibitonthebasisoftheoutputthatisshownwhatcanbedeterminedabouttheetherchannelbundle:
+        [
+          { q: "theetherchannelbundleisdown", c: false },
+          { q: "twogigabitethernetportsareusedtoformtheetherchannel", c: false },
+          {
+            q: "aciscoproprietaryprotocolwasusedtonegotiatetheetherchannellink",
+            c: false,
+          },
+          { q: "theetherchannelbundleisoperatingatbothlayer2andlayer3", c: false },
+        ],
+      whichtwoparametersmustmatchontheportsoftwoswitchestocreateapagpetherchannelbetweentheswitcheschoosetwo:
+        [
+          { q: "portid", c: false },
+          { q: "pagpmode", c: false },
+          { q: "macaddress", c: false },
+          { q: "speed", c: true },
+          { q: "vlaninformation", c: false },
+        ],
+      refertotheexhibitanetworkadministratorisconfiguringanetherchannellinkbetweentwoswitchessw1andsw2whichstatementdescribestheeffectafterthecommandsareissuedonsw1andsw2:
+        [
+          {
+            q: "theetherchannelisestablishedaftersw2initiatesthelinkrequest",
+            c: false,
+          },
+          {
+            q: "theetherchannelisestablishedaftersw1initiatesthelinkrequest",
+            c: false,
+          },
+          { q: "theetherchannelisestablishedwithoutnegotiation", c: false },
+          { q: "theetherchannelfailstoestablish", c: false },
+        ],
+      refertotheexhibitanetworkadministratorisconfiguringanetherchannellinkbetweentwoswitchessw1andsw2howevertheetherchannellinkfailstoestablishwhatchangeinconfigurationwouldcorrecttheproblem:
+        [
+          { q: "configuresw2etherchannelmodetodesirable", c: false },
+          { q: "configuresw2etherchannelmodetoon", c: false },
+          { q: "configuresw1etherchannelmodetoon", c: false },
+          { q: "configuresw2etherchannelmodetoauto", c: false },
+        ],
+      anetworkadministratorconfiguredanetherchannellinkwiththreeinterfacesbetweentwoswitcheswhatistheresultifoneofthethreeinterfacesisdown:
+        [
+          { q: "theremainingtwointerfacescontinuetoloadbalancetraffic", c: false },
+          {
+            q: "theremainingtwointerfacesbecomeseparatelinksbetweenthetwoswitches",
+            c: false,
+          },
+          {
+            q: "oneinterfacebecomesanactivelinkfordatatrafficandtheotherbecomesabackuplink",
+            c: false,
+          },
+          { q: "theetherchannelfails", c: false },
+        ],
+      anetworkadministratorisconfiguringanetherchannellinkbetweenswitchessw1andsw2byusingthecommandsw1configifrangechannelgroup1modeautowhichcommandmustbeusedonsw2toenablethisetherchannel:
+        [
+          { q: "sw2configifrangechannelgroup1modepassive", c: false },
+          { q: "sw2configifrangechannelgroup1modedesirable", c: false },
+          { q: "sw2configifrangechannelgroup1modeon", c: false },
+          { q: "sw2configifrangechannelgroup1modeactive", c: false },
+        ],
+      whichtechnologyisanopenprotocolstandardthatallowsswitchestoautomaticallybundlephysicalportsintoasinglelogicallink:
+        [
+          { q: "pagp", c: false },
+          { q: "lacp", c: false },
+          { q: "multilinkppp", c: false },
+          { q: "dtp", c: false },
+        ],
+      whatisarequirementtoconfigureatrunkingetherchannelbetweentwoswitches: [
+        { q: "theallowedrangeofvlansmustbethesameonbothswitches", c: false },
+        {
+          q: "theparticipatinginterfacesmustbeassignedthesamevlannumberonbothswitches",
+          c: false,
+        },
+        {
+          q: "theparticipatinginterfacesmustbephysicallycontiguousonaswitch",
+          c: false,
+        },
+        { q: "theparticipatinginterfacesmustbeonthesamemoduleonaswitch", c: false },
+      ],
+      whataretwoadvantagesofusinglacpchoosetwo: [
+        {
+          q: "itallowsdirectlyconnectedswitchestonegotiateanetherchannellink",
+          c: false,
+        },
+        {
+          q: "iteliminatestheneedforconfiguringtrunkinterfaceswhendeployingvlansonmultipleswitches",
+          c: false,
+        },
+        { q: "itdecreasestheamountofconfigurationthatisneededonaswitch", c: false },
+        { q: "itprovidesasimulatedenvironmentfortestinglinkaggregation", c: false },
+        { q: "itallowstheuseofmultivendordevices", c: false },
+        {
+          q: "lacpallowsfastethernetandgigabitethernetinterfacestobemixedwithinasingleetherchannel",
+          c: false,
+        },
+      ],
+      aswitchisconfiguredtorunstpwhattermdescribesanonrootportthatispermittedtoforwardtrafficonthenetwork:
+        [
+          { q: "rootport", c: false },
+          { q: "designatedport", c: false },
+          { q: "alternateport", c: false },
+          { q: "disabled", c: false },
+        ],
+      whataretwoadvantagesofetherchannelchoosetwo: [
+        {
+          q: "spanningtreeprotocolviewsthephysicallinksinanetherchannelasonelogicalconnection",
+          c: false,
+        },
+        {
+          q: "loadbalancingoccursbetweenlinksconfiguredasdifferentetherchannels",
+          c: false,
+        },
+        {
+          q: "configuringtheetherchannelinterfaceprovidesconsistencyintheconfigurationofthephysicallinks",
+          c: false,
+        },
+        {
+          q: "spanningtreeprotocolensuresredundancybytransitioningfailedinterfacesinanetherchanneltoaforwardingstate",
+          c: false,
+        },
+        {
+          q: "etherchannelusesupgradedphysicallinkstoprovideincreasedbandwidth",
+          c: false,
+        },
+      ],
+      refertotheexhibitwhatarethepossibleportrolesforportsabcanddinthisrstpenablednetwork:
+        [
+          { q: "alternatedesignatedrootroot", c: false },
+          { q: "designatedalternaterootroot", c: false },
+          { q: "alternaterootdesignatedroot", c: false },
+          { q: "designatedrootalternateroot", c: false },
+        ],
+      refertotheexhibitwhichswitchingtechnologywouldalloweachaccesslayerswitchlinktobeaggregatedtoprovidemorebandwidthbetweeneachlayer2switchandthelayer3switch:
+        [
+          { q: "trunking", c: false },
+          { q: "hsrp", c: false },
+          { q: "portfast", c: false },
+          { q: "etherchannel", c: false },
+        ],
+      refertotheexhibitanadministratorwantstoformanetherchannelbetweenthetwoswitchesbyusingtheportaggregationprotocolifswitchs1isconfiguredtobeinautomodewhichmodeshouldbeconfiguredons2toformtheetherchannel:
+        [
+          { q: "auto", c: false },
+          { q: "on", c: false },
+          { q: "off", c: false },
+          { q: "desirable", c: false },
+        ],
+      opentheptactivityperformthetasksintheactivityinstructionsandthenanswerthequestionwhichsetofconfigurationcommandsissuedonsw1willsuccessfullycompletetheetherchannellinkbetweensw1andsw2:
+        [
+          { q: "interfacegigabitethernet01noshutdown", c: false },
+          { q: "interfaceportchannel1noshutdown", c: false },
+          { q: "interfacegigabitethernet02channelgroup2modedesirable", c: false },
+          { q: "interfacegigabitethernet01channelgroup1modedesirable", c: false },
+        ],
+      asetofswitchesisbeingconnectedinalantopologywhichstpbridgepriorityvaluewillmakeitleastlikelyfortheswitchtobeselectedastheroot:
+        [
+          { q: "65535", c: false },
+          { q: "4096", c: false },
+          { q: "32768", c: false },
+          { q: "61440", c: false },
+        ],
+      inwhichtwopvstportstatesaremacaddresseslearnedchoosetwo: [
+        { q: "learning", c: false },
+        { q: "forwarding", c: false },
+        { q: "disabled", c: false },
+        { q: "listening", c: false },
+        { q: "blocking", c: false },
+      ],
+      whichportroleisassignedtotheswitchportthathasthelowestcosttoreachtherootbridge:
+        [
+          { q: "designatedport", c: false },
+          { q: "disabledport", c: false },
+          { q: "rootport", c: false },
+          { q: "nondesignatedport", c: false },
+        ],
+      aswitchisconfiguredtorunstpwhattermdescribestheswitchportclosestintermsofoverallcosttotherootbridge:
+        [
+          { q: "rootport", c: false },
+          { q: "designatedport", c: false },
+          { q: "alternateport", c: false },
+          { q: "disabled", c: false },
+        ],
+      aswitchisconfiguredtorunstpwhattermdescribesafieldusedtospecifyavlanid: [
+        { q: "extendedsystemid", c: false },
+        { q: "portid", c: false },
+        { q: "bridgepriority", c: false },
+        { q: "bridgeid", c: false },
+      ],
+      aswitchisconfiguredtorunstpwhattermdescribesthereferencepointforallpathcalculations:
+        [
+          { q: "rootbridge", c: false },
+          { q: "rootport", c: false },
+          { q: "designatedport", c: false },
+          { q: "alternateport", c: false },
+        ],
+      aswitchisconfiguredtorunstpwhattermdescribesafieldthathasadefaultvalueof32768andistheinitialdecidingfactorwhenelectingarootbridge:
+        [
+          { q: "bridgepriority", c: false },
+          { q: "macaddress", c: false },
+          { q: "extendedsystemid", c: false },
+          { q: "bridgeid", c: false },
+        ],
+      whichstatementdescribesanetherchannelimplementation: [
+        { q: "etherchanneloperatesonlyatlayer2", c: false },
+        { q: "pagpcannotbeusedinconjunctionwithetherchannel", c: false },
+        { q: "atrunkedportcanbepartofanetherchannelbundle", c: false },
+        { q: "etherchannelcansupportuptoamaximumoftenseparatelinks", c: false },
+      ],
+      refertotheexhibitanetworkadministratorissuedtheshowetherchannelsummarycommandontheswitchs1whatconclusioncanbedrawn:
+        [
+          { q: "theetherchannelissuspended", c: false },
+          { q: "theetherchannelisnotfunctional", c: false },
+          { q: "theportaggregationprotocolpagpismisconfigured", c: false },
+          {
+            q: "fastethernetportsfa01fa02andfa03donotjointheetherchannel",
+            c: false,
+          },
+        ],
+      whichstatementdescribesacharacteristicofetherchannel: [
+        { q: "itcancombineuptoamaximumof4physicallinks", c: false },
+        { q: "itcanbundlemixedtypesof100mbsand1gbsethernetlinks", c: false },
+        {
+          q: "itconsistsofmultipleparallellinksbetweenaswitchandarouter",
+          c: false,
+        },
+        {
+          q: "itismadebycombiningmultiplephysicallinksthatareseenasonelinkbetweentwoswitches",
+          c: false,
+        },
+      ],
+      whichtwochannelgroupmodeswouldplaceaninterfaceinanegotiatingstateusingpagpchoosetwo:
+        [
+          { q: "on", c: false },
+          { q: "desirable", c: false },
+          { q: "active", c: false },
+          { q: "auto", c: false },
+          { q: "passive", c: false },
+        ],
+      refertotheexhibitanetherchannelwasconfiguredbetweenswitchess1ands2buttheinterfacesdonotformanetherchannelwhatistheproblem:
+        [
+          {
+            q: "theinterfaceportchannelnumberhastobedifferentoneachswitch",
+            c: false,
+          },
+          { q: "theswitchportswerenotconfiguredwithspeedandduplexmode", c: false },
+          {
+            q: "theswitchportshavetobeconfiguredasaccessportswitheachporthavingavlanassigned",
+            c: false,
+          },
+          {
+            q: "theetherchannelwasnotconfiguredwiththesameallowedrangeofvlansoneachinterface",
+            c: false,
+          },
+        ],
+      whenetherchannelisconfiguredwhichmodewillforceaninterfaceintoaportchannelwithoutexchangingaggregationprotocolpackets:
+        [
+          { q: "active", c: false },
+          { q: "auto", c: false },
+          { q: "on", c: false },
+          { q: "desirable", c: false },
+        ],
+      whataretwoloadbalancingmethodsintheetherchanneltechnologychoosetwo: [
+        { q: "combinationofsourceportandiptodestinationportandip", c: false },
+        { q: "sourceiptodestinationip", c: false },
+        { q: "sourceporttodestinationport", c: false },
+        { q: "combinationofsourcemacandiptodestinationmacandip", c: false },
+        { q: "sourcemactodestinationmac", c: false },
+      ],
+      whichprotocolprovidesupto16instancesofrstpcombinesmanyvlanswiththesamephysicalandlogicaltopologyintoacommonrstpinstanceandprovidessupportforportfastbpduguardbpdufilterrootguardandloopguard:
+        [
+          { q: "stp", c: false },
+          { q: "rapidpvst", c: false },
+          { q: "pvst", c: false },
+          { q: "mst", c: false },
+        ],
+      whatistheoutcomeofalayer2broadcaststorm: [
+        {
+          q: "routerswilltakeovertheforwardingofframesasswitchesbecomecongested",
+          c: false,
+        },
+        {
+          q: "newtrafficisdiscardedbytheswitchbecauseitisunabletobeprocessed",
+          c: false,
+        },
+        { q: "csmacdwillcauseeachhosttocontinuetransmittingframes", c: false },
+        { q: "arpbroadcastrequestsarereturnedtothetransmittinghost", c: false },
+      ],
+      whichtwonetworkdesignfeaturesrequirespanningtreeprotocolstptoensurecorrectnetworkoperationchoosetwo:
+        [
+          { q: "staticdefaultroutes", c: false },
+          { q: "implementingvlanstocontainbroadcasts", c: false },
+          { q: "redundantlinksbetweenlayer2switches", c: false },
+          { q: "linkstatedynamicroutingthatprovidesredundantroutes", c: false },
+          {
+            q: "removingsinglepointsoffailurewithmultiplelayer2switches",
+            c: false,
+          },
+        ],
+      anetworkadministratorhasconfiguredanetherchannelbetweentwoswitchesthatareconnectedviafourtrunklinksifthephysicalinterfaceforoneofthetrunklinkschangestoadownstatewhathappenstotheetherchannel:
+        [
+          {
+            q: "spanningtreeprotocolwilltransitionthefailedphysicalinterfaceintoforwardingmode",
+            c: false,
+          },
+          {
+            q: "spanningtreeprotocolwillrecalculatetheremainingtrunklinks",
+            c: false,
+          },
+          { q: "theetherchannelwilltransitiontoadownstate", c: false },
+          { q: "theetherchannelwillremainfunctional", c: false },
+        ],
+    };
+    
+    document.getElementById("asd") ||
+      document.head.insertAdjacentHTML(
+        "beforeend",
+        `<style id="asd">.correct:hover{text-decoration:underline;}</style>`
+      ),
+      (c = document.getElementById("questionbarcontainer").childElementCount);
+    
+    for (let a = 0; a < 2 * c; a++)
+      a < c
+        ? document.getElementById("next").click()
+        : document.getElementById("previous").click();
+      
+    setTimeout(() => {
+      function b(a) {
+        return a
+          .trim()
+          .toLowerCase()
+          .replaceAll(/[^\w:]|\n|\u200b|\s/g, "");
+      }
+    
+      function d(a) {
+        for (let b = a.parentElement; ; ) {
+          if ("FIELDSET" == b.tagName) return b;
+          b = b.parentElement;
+        }
+      }
+    
+      for (let f in db) {
+        let a;
+        try {
+          a = d(
+            Array.from(
+              document.querySelectorAll(".question .questionText .mattext")
+            ).find((a) => b(a.innerText) == f)
+          );
+        } catch {
+          continue;
+        }
+    
+        Array.from(a.querySelector(".coreContent").children).forEach((a) => {
+          for (let d of db[f])
+            d.c && b(a.innerText) == d.q && a.classList.add("correct");
+        });
+        
+      }
+    }, 5e4);
+  </code>
+</body>
+</html>
